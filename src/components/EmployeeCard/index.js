@@ -1,14 +1,20 @@
 import React from "react";
+import Col from "../Col"
 import "./style.css";
 
 function EmployeeCard(props) {
   return (
-    <div className="card">
-      <div className="img-container">
+    <div className="row">
+      <Col size="2">
+        <div className="img-container">
         <img alt={props.name} src={props.image} />
-      </div>
+        </div>
+      </Col>
+      <Col size="1">
+        <p>{props.id}</p>
+      </Col>
       <div className="content">
-        <ul>
+        <ul className="infoList">
           <li>
             <strong>Name:</strong> {props.name}
           </li>
