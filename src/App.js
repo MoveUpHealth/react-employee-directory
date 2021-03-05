@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import EmployeeCard from "./components/EmployeeCard";
+import EmployeeRow from "./components/EmployeeRow";
 import TableTitle from "./components/TableTitle";
 import Col from "./components/Col"
 import employees from "./employee.json"
@@ -25,6 +25,17 @@ class App extends Component {
           <Col size="2"><h2 className="tableTitle">Email</h2> </Col>
           <Col size="1"><h2 className="tableTitle">Ext</h2> </Col>
         </TableTitle>
+        {this.state.employees.map((employee) => (
+          <EmployeeRow 
+            id={employee.id}
+          name={employee.name}
+          image={employee.image}
+          role={employee.role}
+          department={employee.department}
+          email={employee.email}
+          extension={employee.extension}
+          />
+        ))}
       
       </Wrapper>
     );
