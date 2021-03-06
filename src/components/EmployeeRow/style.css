@@ -9,12 +9,15 @@
   height: 220px;
   overflow: hidden;
   text-align: center;
-  background:#6CADDC;
 }
 
 .img-container > img {
   width: 100px;
   margin-top: 50px;
+}
+
+.info {
+  margin-top: 70px;
 }
 
 

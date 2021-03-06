@@ -12,3 +12,12 @@ div[data-reactroot] {
   margin: 0;
 }
 
+.tableTitle {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+button.tableTitle {
+  border: none;
+  background-color: azure;
+}
