@@ -11,19 +11,11 @@ function App () {
   
   const [employeeState, setEmployeeState] = useState([{employees}])
 
-  const [sortType, setSortType] = useState('');
+  const [sortType, setSortType] = useState('id');
 
   useEffect(() => {
     const sortArray = type => {
-      const types = {
-        name: 'name',
-        role: 'role',
-        department: 'department'
-      }
-      const sortProperty = types[type]
-      console.log(sortProperty)
-      const sorted = [...employees].sort((a, b) => b[type] - a[type])
-      console.log(sorted)
+      const sorted = [...employees].sort((a, b) => a[type] > b[type] ? 1: -1)
       setEmployeeState(sorted)
     }
 
